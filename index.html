@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Opening Crawl</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #ffc000;
+            font-family: 'Times New Roman', Times, serif;
+            overflow: hidden; /* Oculta el scroll */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 400px; /* Crea la ilusión de profundidad */
+        }
+
+        .fade-in {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: fadein 5s forwards;
+            color: #4CAF50; /* Un verde vibrante para el título */
+            font-size: 3em;
+        }
+
+        .crawl {
+            position: absolute;
+            top: 100%; /* Empieza desde abajo */
+            transform-origin: 50% 100%; /* Punto de rotación en la base */
+            transform: rotateX(20deg); /* Inclinación para el efecto 3D */
+            animation: crawl 60s linear forwards;
+            text-align: justify;
+            font-size: 20px;
+            line-height: 1.5;
+            width: 800px;
+            max-width: 90%;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 5em;
+            margin: 20px 0;
+            text-transform: uppercase;
+        }
+        
+        @keyframes fadein {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes crawl {
+            from { top: 100%; }
+            to { top: -200%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="crawl">
+        <h1 class="title">Star Wars</h1>
+        <p>Hace mucho tiempo, en una galaxia muy, muy lejana...</p>
+        <p>Es un periodo de guerra civil. Naves espaciales rebeldes, atacando desde una base oculta, han logrado su primera victoria contra el malvado Imperio Galáctico.</p>
+        <p>Durante la batalla, espías rebeldes consiguieron apoderarse de los planos secretos del arma definitiva del Imperio, la ESTRELLA DE LA MUERTE, una estación espacial acorazada, tan grande como la luna, capaz de destruir un planeta entero.</p>
+        <p>Perseguida por los siniestros agentes del Imperio, la Princesa Leia corre a casa a bordo de su nave estelar, llevando consigo los planos robados que pueden salvar a su pueblo y devolver la libertad a la galaxia...</p>
+        <p>Es un periodo de guerra civil. Naves espaciales rebeldes, atacando desde una base oculta, han logrado su primera victoria contra el malvado Imperio Galáctico.</p>
+        <p>Durante la batalla, espías rebeldes consiguieron apoderarse de los planos secretos del arma definitiva del Imperio, la ESTRELLA DE LA MUERTE, una estación espacial acorazada, tan grande como la luna, capaz de destruir un planeta entero.</p>
+        <p>Perseguida por los siniestros agentes del Imperio, la Princesa Leia corre a casa a bordo de su nave estelar, llevando consigo los planos robados que pueden salvar a su pueblo y devolver la libertad a la galaxia...</p>
+    </div>
+
+    </body>
+</html>

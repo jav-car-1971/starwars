@@ -39,13 +39,16 @@
             top: 100%; /* Empieza desde abajo */
             transform-origin: 50% 100%; /* Punto de rotación en la base */
             transform: rotateX(20deg); /* Inclinación para el efecto 3D */
-            animation: crawl 60s linear forwards;
             text-align: justify;
             font-size: 20px;
             line-height: 1.5;
             width: 800px;
             max-width: 90%;
             display: none; /* Oculto hasta que se presione el botón */
+        }
+
+        .crawl.animate {
+            animation: crawl 60s linear forwards;
         }
 
         .title {
@@ -88,10 +91,10 @@
             startButton.addEventListener('click', () => {
                 startButton.style.display = 'none'; // Oculta el botón
                 crawlText.style.display = 'block'; // Muestra el texto
+                crawlText.classList.add('animate'); // Agrega la clase para activar la animación
                 audio.play(); // Reproduce el audio
             });
         });
     </script>
 </body>
 </html>
- 

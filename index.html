@@ -70,5 +70,16 @@
         <p>Perseguida por los siniestros agentes del Imperio, la Princesa Leia corre a casa a bordo de su nave estelar, llevando consigo los planos robados que pueden salvar a su pueblo y devolver la libertad a la galaxia...</p>
     </div>
 
-    </body>
+    <audio id="star-wars-audio" src="star_wars_theme.mp3" preload="auto"></audio>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('star-wars-audio');
+            // Reproducir el audio después de un breve retraso para dar tiempo a la animación
+            setTimeout(() => {
+                audio.play();
+            }, 3000); // 3 segundos de retraso
+        });
+    </script>
+</body>
 </html>
